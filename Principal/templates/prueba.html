@@ -1,0 +1,97 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Registro Profesor</title>
+    <meta charset="UTF-8">
+    <link rel="icon" href="{% static 'img/ciencia.ico' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/Cargando.css'%}">
+    <link rel="stylesheet" href="{% static 'css/Registrase.css'%}">
+    <link rel="stylesheet" href="{% static 'css/General.css'%}">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <p>CIENCIA PARK DIGITAL</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="javascript:cargarPaginaInicioSesion()">Inicio</a></li>
+                <li><a href="index.html.#mision">Mision</a></li>
+                <li><a href="index.html.#vision">Vision</a></li>
+                <li><a href="registrarseProfesor.html">Soporte</a></li>
+                <li><a href="index.html.#container">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="home" id="home">
+        <div class="iniciarsesion">
+            <form action= "{% url 'Esturegistro' %}" method="post">
+                <div class="titulo-Iniciarsesion">
+                    <label>
+                        <h1><span>REGISTRASE</span></h1>
+                    </label>
+                </div>
+                
+                <div class="inputLabel-Iniciarsesion">
+                    <div>
+                        {% csrf_token %}
+                        <label class="form-label" for="id_primerNombre">Primer Nombre</label>
+                        <input type="text" name="primerNombre" id="id_primerNombre" class="form-control" />
+                        <br>
+                        <label class="form-label" for="id_primer_Apellido">Primer Apellido</label>
+                        <input type="text" name="primerApellido" id="id_primer_Apellido" class="form-control" />
+                        <br>
+                        <label class="form-label" for="id_genero">Genero</label>
+                        <input type="text" name="genero" id="genero" class="form-control" />
+                        <br>
+                        <label class="form-label" for="id_fechaNacimiento">Fecha Nacimiento</label>
+                        <input type="date" name="fechaNacimiento" id="id_fechaNacimiento" class="form-control" />
+                        <br>
+                        <label class="form-label" for="id_telefono">Telefono</label>
+                        <input type="text" name="telefono" id="id_telefono" class="form-control" />
+                        <br>
+                        <label class="form-label" for="id_escolaridad">Nivel de Escolaridad</label>
+                        <input type="text" name="nivelEscolar" id="id_escolaridad" class="form-control" />
+                        <br>
+                        <label class="form-label" for="id_contraseña">Contraseña</label>
+                        <input type="password" name="password" id="id_contraseña" class="form-control" />
+
+                        <label class="form-label" for="id_segundoNombre">Segundo Nombre</label>
+                        <input type="text" name="segundoNombre" id="id_segundoNombre" class="form-control" />
+                        <br>
+                        <label class="form-label" for="id_segundoApellido">Segundo Apellido</label>
+                        <input type="text" name="segundoApellido" id="id_segundoApellido" class="form-control" />
+                        <br>
+                        <label class="form-label" for="id_Nacionalidad">Nacionalidad</label>
+                        <input type="text" name="nacionalidad" id="id_Nacionalidad" class="form-control" />
+                        <br>
+                        <label class="form-label" for="id_edad">Edad</label>
+                        <input type="text" name="edad" id="id_edad" class="form-control" />
+                        <br>
+                        <label class="form-label" for="id_direccion">Direccion</label>
+                        <input type="text" name="direccion" id="id_direccion" class="form-control" />
+                        <br>
+                        <label class="form-label" for="id_correo">Correo</label>
+                        <input type="text" name="correo" id="id_correo" class="form-control" />
+
+                        <button type="submit" class="btn btn-primary btn-block mb-4">Registrarse</button>
+            </form>
+        </div>
+
+        <div class="container-cargando">
+            <div class="ring"></div>
+            <div class="ring"></div>
+            <div class="ring"></div>
+        </div>
+
+        <script src="{% static 'js/abrirventanas.js' %}"></script>
+        <script src="{% static 'js/LodingNextPage.js' %}"></script>
+</body>
+
+</html>

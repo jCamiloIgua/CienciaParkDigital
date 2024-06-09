@@ -1,0 +1,151 @@
+{% load static  %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>CienciaParkDigital</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="{% static 'img/ciencia.ico' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/Cargando.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/General.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/estilosfooter.css' %}">
+  <script src="https://kit.fontawesome.com/bbaa0992cc.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <p>CIENCIA P.D</p>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="{% url 'inicio' %}">Inicio</a></li>
+        <li><a href="#mision">Mision</a></li>
+        <!--<li><a href="assets/php/CuentaProfe.php">Mision</a></li>-->
+        <li><a href="#vision">Vision</a></li><!--Con el Id-->
+        <li><a href="{% url 'reprofesor'%}">Soporte</a></li> 
+        <li><a href="2.html">Contacto</a></li>
+      </ul>
+    </nav>
+   <!--<button><a href="javascript:cargarPaginaInicio()">Iniciar Sesión</a></button>-->
+   <button id= "inicioSesionbtn">Iniciar Sesión</button>
+   <script>
+    var urIniSesion = "{% url 'iniSesion' %}";//Guardar la url eb una variable para el otro archivo
+    document.getElementById("inicioSesionbtn").addEventListener("click", function(){ //metodo click
+      cargarPaginaIniSesion();
+    });
+   </script>
+  </header>
+
+  <section class="home" id="home">
+    <div class="home-text">
+      <h1>Bienvenido a</h1><h2><span>CienciaPark Digital </span>, es una <br>pagina que web que busca <br> evolucionar la educación
+      <br> en el ambito de las areas de <span>Fisica</span>
+      <span>y Matematicas</span> en las <br> instituciones educativas de Colombia y del mundo. </h2>
+    </div>
+
+    <div class="home-img">
+      <img  type="image/jpg" src="{% static 'img/CuartaImagen.png' %}" alt="">
+    </div>
+  </section>
+
+  <!--Mision-->
+  <section class="misionVision" id="mision">
+
+    <div class="misionVision-img">
+      <img src="{% static 'img/CuartaImagen.png'%}">
+    </div>
+    <div class="misionVision-text">
+      <h2>Mision de <span>CienciaParkDigital</span></h2>
+      <p>
+        El objetivo central de la página web es proporcionar a los profesores
+        herramientas innovadoras de simulación práctica que faciliten la enseñanza 
+        a estudiantes de bachillerato en una variedad de temas relacionados con las
+        matemáticas y la física, aplicándolos en la vida real.
+      </p>
+      <button><a href="{% url 'inicio' %}" class="button">Volver al inicio</a></button>
+    </div>
+  </section>
+
+    <!--Vision-->
+    <section class="misionVision" id="vision">
+
+      <div class="misionVision-img">
+        <img src="{% static 'img/CuartaImagen.png'%}">
+      </div>
+      <div class="misionVision-text">
+        <h2>Visión de <span>CienciaParkDigital</span></h2>
+        <p>
+          Nuestra visión es convertirnos en un referente destacado en el ámbito educativo, 
+          al ser reconocidos como la principal plataforma que empodera a los profesores 
+          con herramientas innovadoras de simulación práctica. Buscamos trascender los límites 
+          de la enseñanza convencional, inspirando a estudiantes de secundaria a través de experiencias 
+          educativas inmersivas que aplican conceptos matemáticos y físicos en situaciones de la vida real.
+        </p>
+        <button><a href="{% url 'inicio' %}" class="button">Volver al inicio</a></button>
+      </div>
+    </section>
+
+  <!--container-->
+  <section class="container" id="container">
+
+    <div class="container-box">
+      <img src="{% static 'img/OctavaImagen.png'%}">
+      <h3>11:30 - 11:50</h3>
+      <a href="">Atención al cliente</a>
+    </div>
+
+    <div class="container-box">
+      <img src="{% static 'img/OctavaImagen.png'%}">
+      <h3>CLL 80 #12-45</h3>
+      <a href="">Ubicaciónn</a>
+    </div>
+
+    <div class="container-box">
+      <img src="{% static 'img/OctavaImagen.png'%}">
+      <h3>311506849875</h3>
+      <a href="">Contacto</a>
+    </div>
+
+  </section>
+  <footer>
+    <div class="footerContainer">
+      <ul class="social-icons">
+        <li class="lista">
+          <a href=""><i class="fa-brands fa-facebook"></i></a>
+          <span class="tooltiptext">Facebook</span>
+        </li>
+        <li class="lista">
+          <a href=""><i class="fa-brands fa-instagram"></i></a>
+          <span class="tooltiptext">Instagram</span>
+        </li>
+        <li class="lista">
+          <a href=""><i class="fa-brands fa-linkedin"></i></a>
+          <span class="tooltiptext">Linkedin</span>
+        </li>
+        <li class="lista">
+          <a href=""> <i class="fa-brands fa-square-x-twitter"></i></a>
+          <span class="tooltiptext">X</span>
+        </li>
+        <li class="lista">
+          <a href=""><i class="fa-brands fa-github"></i></a>
+          <span class="tooltiptext">Github</span>
+        </li>
+      </ul>
+    </div>
+    <div class="footerBotton">
+      <p>Copyright &copy;2023 Diseñado por <span class="designer">CienciaParkDigital</p>
+    </div>
+  </footer>
+
+  <div class="container-cargando">
+    <div class="ring"></div>
+    <div class="ring"></div>
+    <div class="ring"></div>
+  </div>
+
+  <script src="{% static 'js/NavMantener.js' %}"></script>
+  <script src="{% static 'js/LodingNextPage.js' %}"></script>
+
+  
+</body>
+</html>

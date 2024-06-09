@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+/*Diseño* general*/
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif ;
+    box-sizing: border-box;
+}
+/*Definir algunos colores y diseño solo 
+se requiere llamar estar funciones con var()*/
+:root{
+    --main-color: purple;
+    --text-color: #ffff;
+    --other-color: #212121;
+    --second-color: #9e9e9e;
+    --bg-color: #111;
+
+    --big-font: 1.7rem;
+    --h2--font: 2.6rem;
+    --p-font: 1.1rem;
+}
+
+/*Nav en index.html*/
+body{
+    background: url(../img/FondoPrincipal.jpg) no-repeat;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+header{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    background-color: rgb(0, 0, 0,0.2);
+}
+.logo{
+    font-size: 30px;
+    font-weight: bold;
+    color: purple;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+}
+nav li{
+    display: inline-block;
+    list-style: none;
+    padding: 0px 20px;
+}
+a,button{
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+button{
+    background: rgb(0,0,0,0.2);
+    border: 2px solid purple;
+    border-radius: 50px;
+    padding: 9px 25px;
+}
+nav li a:hover{
+    color: purple;
+    transition: all 0.4s ease 0s;
+}
+button:hover{
+    background-color: purple;
+    transition: all 0.4s ease 0s;
+}
+
+/*Incio en index.html*/
+section{
+    padding: 70px 14% 60px;
+}
+.home{
+    position: relative;
+    height: 90vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 2rem;
+}
+.home-img img{
+    width: 100%;
+    height: auto;
+}
+.home-text h1, h2{
+    font-size: var(--big-font);
+    font-weight: 700;
+    line-height: 1.3;
+    color: #fff;
+}
+span {
+    color: var(--main-color);
+}
+header.sticky{
+    padding: 12px 14%;
+    background: var(--other-color);
+}
+
+/*Mision y vision en index.hmtl*/
+.misionVision{
+    height: 100vh;
+    background: url('../img/FondoPrincipal.jpg');
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 4rem;
+}
+.misionVision-img img {
+    width: 100%;
+    height: auto;
+}
+.misionVision-text h2 {
+    font-size: var(--h2--font);
+    line-height: 1.3;
+    margin-bottom: 2rem;
+}
+.misionVision-text p{
+    color: white;
+    font-size: var(--p-font);
+    line-height: 30px;
+    margin-bottom: 3rem;
+}
+
+/*Container*/
+.container{
+    background: #464242;
+    padding: 100px 2% 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, auto));
+    text-align: center;
+}
+.container-box {
+    padding: 40px;
+    background: var(--other-color);
+    border-radius: 3rem;
+}
+.container-box img{
+    width: 100%;
+    max-width: 100px;
+    height: auto;
+}
+.container-box h3{
+    font-size: 21px;
+    font-weight: bold;
+    margin: 16px 0;
+}
+.container-box a {
+    color: white;
+    font-size: var(--p-font);
+    letter-spacing: 1px;
+    transition: all 0.5s ease;
+}
+.container-box a:hover{
+    color: purple;
+}
+/*Abrir Nueva Ventana en iniciarsesion.html*/
+.ventana {
+    background-color: transparent; /* Fondo transparente */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999; /* Asegura que esté en la parte superior */
+}  
+.ventana-contenido {
+    background-color: rgba(60, 58, 58, 1);
+    width: 50%;
+    height: 60%;
+    color: purple;
+    text-align: center;
+    padding: 33px;
+    min-height: 250px;
+    border-radius: 22px;
+}

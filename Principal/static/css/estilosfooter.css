@@ -1,0 +1,101 @@
+footer{
+    background-color: black;
+}
+
+.footerContainer{
+    width: 100%;
+    padding: 3px 30px 50px;
+}
+
+
+/*iconos*/
+.social-icons {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+.lista{
+    display: inline-block;
+    margin: 60px;
+    cursor: pointer;
+    position: relative;
+}
+
+.lista::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #00b5f5, #002a8a);
+    transition: all 500ms ease-out;
+}
+
+.lista i {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    color: white;
+    font-size: 35px !important;
+
+}
+
+.tooltiptext {
+    position: absolute;
+    top: -30px;
+    left: -20px;
+    z-index: 1;
+    width: 120px;
+    text-align: center;
+    background: linear-gradient(45deg, #00b5f5, #002aBa, #ff00d4);
+    color: white;
+    font-family: cursive;
+    transition: all 500ms ease-out;
+    border-radius: 6px;
+    padding: 5px 0px;
+    opacity: 0;
+}
+
+.tooltiptext::before {
+    position: absolute;
+    content: '';
+    top: 100%;
+    left: 45%;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #002a8a transparent transparent transparent;
+}
+
+.lista:hover::before {
+    transform: scale(0);
+}
+
+.lista:hover i {
+    transform: scale(2);
+    background: linear-gradient(45deg, #00b5f5, #ff00d4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.lista:hover .tooltiptext {
+    opacity: 1;
+}
+
+/*copi*/
+.footerBotton{
+    background-color: grey;
+    padding: 20px;
+    text-align: center;
+}
+.footerBotton{
+    color: white;
+}
+.designer{
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}

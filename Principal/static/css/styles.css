@@ -1,0 +1,103 @@
+
+
+.container{
+    width: 12020;
+    border-radius: 25px;
+    background: rgb(26, 25, 25, 0.9);
+    border: 2px solid rgba(255, 255, 255, 0.6);
+}
+.card{
+    height: 350px;
+    width: 1050px;
+    transition: 300ms;
+    margin-left: 28px;
+}
+.personaje, .personaje_2, .personaje_3{
+    height: 350px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10%;
+    background-color: purple;
+    transition: 300ms;
+    position: relative;
+}
+.imagen_personaje {
+    height: 350px;
+    width: 200px;
+    background-image: url('/static/img/Profesor.png');
+    background-size: cover;
+    margin-bottom: 200px;
+    transition: 300ms;
+    filter: drop-shadow(5px -4px 10px #000);
+}
+.imagen_personaje_2{
+    height: 350px;
+    width: 250px;
+    background-image: url('/static/img/Estudiante.png');
+    background-size: cover;
+    margin-bottom: 200px;
+    transition: 300ms;
+    filter: drop-shadow(5px -4px 10px #000);
+}
+.imagen_personaje_3{
+    height: 350px;
+    width: 200px;
+    background-image: url('/static/img/aministrador.png');
+    background-size: cover;
+    margin-bottom: 200px;
+    transition: 300ms;
+    filter: drop-shadow(5px -4px 10px #000);
+}
+.detalle, .detalle_2, .detalle_3{
+    height: 200px;
+    width: 300px;
+    background-color: white;
+    position: absolute;
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+    margin-top: 150px;
+    z-index: 2;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    transition: 300ms;
+}
+/* hover */
+.card:hover{
+    transform: scale(1.1);
+}
+.card:hover .imagen_personaje{
+    transform: translatey(-40px);
+    transition: 300ms;
+    filter: none;
+    background-image: url('/static/img/vegeta_V2.png');
+}
+.card:hover .imagen_personaje_2{
+    transform: translatey(-40px);
+    transition: 300ms;
+    filter: none;
+    background-image: url('/static/img/GOKU_V2.png');
+}
+.card:hover .imagen_personaje_3{
+    transform: translatey(-40px);
+    transition: 300ms;
+    filter: none;
+    /*background-image: url('../img/gohan_v1.png')*/
+    background-image: url('/static/img/gohan.png');
+}
+.card:hover .personaje{
+    background-image: radial-gradient(white,rgb(233, 12, 52));
+}
+.card:hover .personaje_2{
+    background-image: radial-gradient(white,rgb(99, 27, 60));
+}
+.card:hover .personaje_3{
+    background-image: radial-gradient(white,rgb(251, 7, 149));
+}
+.detalle h2{
+    color: #000;
+}
+.detalle a{
+    color: purple;
+}

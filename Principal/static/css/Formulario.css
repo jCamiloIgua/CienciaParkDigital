@@ -1,0 +1,93 @@
+/*IniciarSesion*/
+.iniciarsesion {
+    position: relative;
+    width: 450px;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    border-radius: 20px;
+    height: 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    background: rgba(47, 46, 46, 0.4);
+    margin: 10px;
+}
+.iniciarsesion-box {
+    text-align: center; /* Centra horizontalmente */
+    display: flex;
+    flex-direction: column; /* Asegura que los elementos se apilen verticalmente */
+    align-items: center; /* Centra verticalmente */
+    width: 75%;
+}
+.iniciarsesion h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 2.3rem;
+    margin: -40px;
+}
+.titulo-Iniciarsesion {
+    top: 25px;
+    left: 10px;
+    position: relative;
+    margin: 20px 0;
+    width: 350px;
+}
+.inputLabel-Iniciarsesion {
+    top: 25px;
+    left: 10px;
+    position: relative;
+    margin: 29px;
+    width: 350px;
+    border-bottom: 2px solid #fff;
+}
+.iniciarsesion input{
+    width: 100%;
+    height: 50px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    padding: - 35px 0 5px;
+    color: purple;
+}
+.inputLabel-Iniciarsesion label{
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    transform: translateY(-40%);
+    color: #fff;
+    font-size: 1rem;
+    pointer-events: none;
+    transition: .6s;
+    font-weight: bold;
+}
+
+input:focus ~ label,
+input:valid ~ label{
+    top: -5px;
+}
+.olvidar{
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+}
+button{
+    width: 100%;
+    border-radius: 15px;
+    margin: 5px
+}
+.registrar{
+    display: flex;
+    justify-content: center;
+}
+.registrar p{
+    color: #fff;
+}
+.registrar a{
+    color: purple;
+    font-size: 1rem;
+}
+.registrar a:hover{
+    text-decoration: underline;
+}
+

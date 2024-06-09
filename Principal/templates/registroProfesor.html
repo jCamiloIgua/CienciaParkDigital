@@ -1,0 +1,109 @@
+{% load static  %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Registro Profesor</title>
+  <meta charset="UTF-8">
+  <link rel="icon" href="{% static 'img/ciencia.ico' %}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css/Cargando.css'%}">
+  <link rel="stylesheet" href="{% static 'css/Registrase.css'%}">
+  <link rel="stylesheet" href="{% static 'css/General.css'%}">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <p>CIENCIA PARK DIGITAL</p>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="javascript:cargarPaginaInicioSesion()">Inicio</a></li>
+            <li><a href="index.html.#mision">Mision</a></li>
+            <li><a href="index.html.#vision">Vision</a></li>
+            <li><a href="registrarseProfesor.html">Soporte</a></li>
+            <li><a href="index.html.#container">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="home" id="home">
+    <div class="iniciarsesion">
+        <form action="assets/php/registroProfesor.php" method="post">
+            <div class="titulo-Iniciarsesion">
+                <label><h1><span>REGISTRASE</span></h1></label> 
+            </div>
+            <div class="inputLabel-Iniciarsesion">
+                <div>
+                    <label>Primer Nombre</label>
+                    <input type="text" name="primerNombre">
+                </div>
+                <div>
+                    <label>Segundo Nombre</label>
+                    <input type="password" name="segundoNombre">
+                </div>
+                <div>
+                    <label>Primer Apellido</label>
+                    <input type="text" name="primerApellido">
+                </div>
+                <div>
+                    <label>Segundo Apellido</label>
+                    <input type="text" name="segundoApellido">
+                </div>
+                <div>
+                    <label>Fecha Nacimiento</label>
+                    <input type="date" name="fechanacimiento">
+                </div>
+                <div>
+                    <label>Edad</label>
+                    <input type="text" name="edad">
+                </div>
+                <div>
+                    <label>Nacionalidad</label>
+                    <input type="text" name="nacionalidad">
+                </div>
+                <div>
+                    <label>Telefono</label>
+                    <input type="text" name="telefono">
+                </div>
+                <div>
+                    <label>Dirección</label>
+                    <input type="text" name="direccion">
+                </div>
+                <div>
+                    <label>Genero</label>
+                    <input type="text" name="genero">
+                </div>
+                <div>
+                    <label>Institucion</label>
+                    <input type="text"  name="institucion">
+                </div>
+                <div>
+                    <label>Especialidad</label>
+                    <input type="text" name="especialidad">
+                </div>
+                <div>
+                    <label>Correo Electronico</label>
+                    <input type="text" name="email">
+                </div>
+                <div>
+                    <label>Contraseña</label>
+                    <input type="text" name="password">
+                </div>
+                <button type="submit" class="btn btn-primary btn-block mb-4">
+                    Registrarse
+                  </button>
+            </div>
+        </form>
+    </div>
+
+<div class="container-cargando">
+    <div class="ring"></div>
+    <div class="ring"></div>
+    <div class="ring"></div>
+</div>
+
+<script src="{% static 'js/abrirventanas.js' %}"></script>
+<script src="{% static 'js/LodingNextPage.js' %}"></script>
+</body>
+</html>

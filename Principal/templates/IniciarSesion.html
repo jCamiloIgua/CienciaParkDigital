@@ -1,0 +1,128 @@
+{% load static  %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Inicio Sesion</title>
+  <meta charset="UTF-8">
+  <link rel="icon" href="{% static 'img/ciencia.ico' %}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" type="text/css" href="{% static 'css/Cargando.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/Formulario.css'%}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/General.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <p>CIENCIA PARK DIGITAL</p>
+    </div>
+    <nav>
+        <ul>
+            <li><a class="inicioPrincipal">Inicio</a></li>
+            <script>
+                var urInicio = "{% url 'inicio' %}";//Guardar la url eb una variable para el otro archivo
+                document.querySelector(".inicioPrincipal").addEventListener("click", function(){ //metodo click
+                  cargarPaginaInicio();
+                });
+               </script>
+            <li><a href="index.html.#mision">Mision</a></li>
+            <li><a href="index.html.#vision">Vision</a></li>
+            <li><a href="registrarseProfesor.html">Soporte</a></li>
+            <li><a href="index.html.#container">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="home" id="home">
+    <div class="home-text">
+        <h2>Inicia sesión en <span>Ciencia Park Digital</span> como profesor o alumno <br> utilizando el correo electrónico y contraseña al momento de <br>
+            registrarse en la plataforma. <br>Si aún no estás registrado en <br> la página web, da clic en el enlace que dice<span> Crear una</span>
+        </h2>
+    </div>
+
+    <div class="iniciarsesion">
+        <form action="assets/php/validacion.php" class="iniciarsesion-box" method="post">
+            <div class="titulo-Iniciarsesion">
+                <label><h1><span>INICIAR SESIÓN</span></h1></label> 
+            </div>
+            <div class="inputLabel-Iniciarsesion">
+                <input type="text" name="email">
+                <label>Correo</label>
+            </div>
+            <div class="inputLabel-Iniciarsesion">
+                <input type="password" name="password">
+                <label>Contraseña</label>
+            </div>
+            <div class="olvidar">
+                <label for="">
+                    <a href="">Para recuperar contraseña <span>Click aquí</span></a>
+                </label>
+            </div>
+            <button>Acceder</button>
+
+            <div class="registrar">
+                <p>No tengo cuenta <span><a href="javascript:abrirRegistrar()">Crear una</a></span></p>
+            </div>
+        </form>
+    </div>
+</section>
+
+<div class="ventana" id="vent">
+    <div class="container">
+        <div class="card">
+            <div class="personaje">
+                <div class="imagen_personaje"></div>
+                <div class="detalle">
+                    <h2>Profesor</h2>
+                    <p>Registrate como profesor dando <a id="PaginaregistroProfesor">CLICK AQUI</a></p>
+                    <script>
+                        var urregistropro = "{% url 'reprofesor' %}";//Guardar la url eb una variable para el otro archivo
+                        document.getElementById("PaginaregistroProfesor").addEventListener("click", function(){ //metodo click
+                            cargarPaginaRegistro();
+                        });
+                       </script>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="personaje_2">
+                <div class="imagen_personaje_2"></div>
+                <div class="detalle">
+                    <h2>Estudiante</h2>
+                    <p class="rou">Registrate como estudiante dando <a id=PaginaregistroEstudiante>CLICK AQUI</a></p>
+                    <script>
+                        var urregistroestu= "{% url 'Esturegistro' %}";//Guardar la url eb una variable para el otro archivo
+                        document.getElementById("PaginaregistroEstudiante").addEventListener("click", function(){ //metodo click
+                            cargarPaginaRegistroEstudiante();
+                        });
+                       </script>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="personaje_3">
+                <div class="imagen_personaje_3"></div>
+                <div class="detalle">
+                    <h2>Administrador</h2>
+                    <p>Registrate como administrador dando <a href="javascript:cargarPaginaRegistro()">CLICK AQUI</a></p>
+                </div>
+            </div>
+        </div>
+    </div>   
+</div>
+
+<div class="container-cargando">
+    <div class="ring"></div>
+    <div class="ring"></div>
+    <div class="ring"></div>
+</div>
+
+<script src="{% static 'js/abrirventanas.js' %}"></script>
+<script src="{% static 'js/LodingNextPage.js' %}"></script>
+
+</body>
+</html>

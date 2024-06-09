@@ -1,0 +1,138 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Registro Estudiante</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="{% static 'img/ciencia.ico' %}">
+  <link rel="stylesheet" href="{% static 'css/Cargando.css'%}">
+  <link rel="stylesheet" href="{% static 'css/Registrase.css'%}">
+  <link rel="stylesheet" href="{% static 'css/General.css'%}">
+</head>
+
+<body>
+  <div id="alerta" class="alert alert-success" style="display: none;">
+    Registro completado exitosamente.
+  </div>
+  <div id="alerta2" class="alert alert-success" style="display: none;">
+    Error vuelva a intentarlo.
+  </div>
+
+  <nav class="navbar navbar-expand-lg navbar-light colorfondoNav bg-light">
+    <div class="container-fluid">
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">CienciaParkDigital</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="inicarsesion.html">Iniciar sesion</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="registrarse.html" tabindex="-1" aria-disabled="true">Registrarse</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
+          <button class="btn btn-outline-success" type="submit">Buscar</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <section class="background-radial-gradient overflow-hidden"></section>
+  <div class="container px-3 py-3 px-md-3 text-center text-lg-start my-3">
+    <div class="row gx-lg-5 align-items-center mb-5">
+      <div class="col-lg-6 mb-5 mb-lg-0" style="z-index: 10">
+        <h1 class="my-5 display-5 fw-bold ls-tight" style="color: hsl(218, 81%, 95%)">
+          Registrarse<br />
+          <span style="color: hsl(218, 81%, 75%)">como estudiante</span>
+        </h1>
+        <img style="width: 90%" src="assets/img/CuartaImagen.png" alt="">
+      </div>
+
+      <div class="col-lg-6 mb-5 mb-lg-0 position-relative">
+        <div id="radius-shape-1" class="position-absolute rounded-circle shadow-5-strong"></div>
+        <div id="radius-shape-2" class="position-absolute shadow-5-strong"></div>
+
+        <div class="card bg-glass">
+          <div class="card-body px-4 py-5 px-md-5">
+            <form action="{% url 'Esturegistro' %}" method="post">
+              <div class="row">
+                <div class="col-md-6 mb-4">
+                  {% csrf_token %}
+                  <div class="form-outline">
+                    <label class="form-label" for="id_primerNombre">Primer Nombre</label>
+                    <input type="text" name="primerNombre" id="id_primerNombre" class="form-control" />
+                    <br>
+                    <label class="form-label" for="id_primer_Apellido">Primer Apellido</label>
+                    <input type="text" name="primerApellido" id="id_primer_Apellido" class="form-control" />
+                    <br>
+                    <label class="form-label" for="id_genero">Genero</label>
+                    <input type="text" name="genero"  id= "genero" class="form-control" />
+                    <br>
+                    <label class="form-label" for="id_fechaNacimiento">Fecha Nacimiento</label>
+                    <input type="date" name="fechaNacimiento" id = "id_fechaNacimiento"class="form-control" />
+                    <br>
+                    <label class="form-label" for="id_telefono">Telefono</label>
+                    <input type="text" name="telefono" id = "id_telefono"class="form-control" />
+                    <br>
+                    <label class="form-label" for="id_escolaridad">Nivel de Escolaridad</label>
+                    <input type="text" name="nivelEscolar" id="id_escolaridad" class="form-control" />
+                    <br>
+                    <label class="form-label" for="id_contraseña">Contraseña</label>
+                    <input type="password" name="password" id = "id_contraseña"class="form-control" />
+                  </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                  {% csrf_token %}
+                  <div class="form-outline">
+                    <label class="form-label" for="id_segundoNombre">Segundo Nombre</label>
+                    <input type="text" name="segundoNombre" id="id_segundoNombre" class="form-control" />
+                    <br>
+                    <label class="form-label" for="id_segundoApellido">Segundo Apellido</label>
+                    <input type="text" name="segundoApellido" id = "id_segundoApellido"class="form-control" />
+                    <br>
+                    <label class="form-label" for="id_Nacionalidad">Nacionalidad</label>
+                    <input type="text" name="nacionalidad" id = "id_Nacionalidad"class="form-control" />
+                    <br>
+                    <label class="form-label" for="id_edad">Edad</label>
+                    <input type="text" name="edad" id = "id_edad"class="form-control" />
+                    <br>
+                    <label class="form-label" for="id_direccion">Direccion</label>
+                    <input type="text" name="direccion" id = "id_direccion"class="form-control" />
+                    <br>
+                    <label class="form-label" for="id_correo">Correo</label>
+                    <input type="text" name="correo" id = "id_correo"class="form-control" />
+                  </div>
+                </div>
+              </div>
+
+
+              <!-- Submit button -->
+              <!--<button type="submit" class="btn btn-primary btn-block mb-4" onclick="mostrarAlerta()">
+                Registrarse
+              </button>-->
+              <button type="submit" class="btn btn-primary btn-block mb-4">Registrarse</button>
+          </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+ <!-- {{formulario}}-->
+  </section>
+
+
+
+  <script src="https://kit.fontawesome.com/bbaa0992cc.js" crossorigin="anonymous"></script> <!--Font Awesome-->
+  <!--DISEÑO-->
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
